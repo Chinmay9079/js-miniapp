@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <style>
+
+input{
+  text-align: center;
+ 
+ 
+  transition: 0.5s;
+}
+
+input[type="text"]{
+  background: #fff;
+  width: 340px;;
+  height: 50px;
+  outline: none;
+
+  padding: 0 25px;
+  border-radius:  25px 0 25px ;
+ 
+  
+}
+.btn:hover{
+  background:#ffc107;
+  color: #fff;
+
+}
+.btn{
+  margin: 20px;
+  position: relative;
+  border-radius:  25px 0 25px ;
+  height: 30px;
+  width: 70px;
+   border: none;
+    outline: none;
+    cursor:pointer;
+    background: #E44D51;
+    color:#fff;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Greeting user</title>
+    <script>
+         var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Good Morning';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening';
+
+        function show(){
+            var name = document.getElementById("name").value;
+            document.getElementById("h1").innerHTML=greet+ " " +name;
+            
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <label>Enter your Name -</label>
+        <input type="text" id="name" ></input></br>
+        <button class="btn" type="submit" onclick="show()">Submit</button>
+    </div>
+   
+    <h1 id="h1"></h1>
+   
+    
+    
+    
+</body>
+</html>
